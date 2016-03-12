@@ -1,0 +1,10 @@
+<launch>
+ <include file="$(find nextage_moveit_config)/launch/moveit_planning_execution.launch" />
+ <node name="nextage_moveit_planning_execution_node" pkg="nextage_moveit_planning_execution"
+       type="nextage_moveit_planning_execution_node"
+       respawn="false"
+       output="screen">
+  <rosparam command="load" file="$(find nextage_moveit_config)/config/kinematics_kdl.yaml"/>
+ </node>
+
+</launch>
